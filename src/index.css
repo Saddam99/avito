@@ -1,13 +1,139 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    max-width: 728px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+
 }
+
+.header {
+    text-align: center;
+    font-size: 36px;
+    padding: 15px 0 30px;
+}
+
+.main {
+    padding-bottom: 375px;
+    position: relative;
+}
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0;
+}
+
+.image-width {
+    width: 230px;
+     padding-bottom: 25px;
+
+}
+
+
+.footer {
+     text-align: center;
+     font-size: 14px;
+     color: #cccccc;
+     padding-bottom: 20px;
+ }
+
+.footer hr {
+     margin-bottom: 20px;
+     color: #cccccc
+ }
+.fon {
+     background-color: rgba(0, 0, 0, .7);
+     position: fixed;
+     top: 0;
+     left: calc(50% - (768px / 2));
+     width: 768px;
+     height: 100%;
+ }
+.mod {
+     background-color: white;
+     display: flex;
+     width: 620px;
+     padding: 30px 20px 30px 30px;
+     position: absolute;
+     top: 20%;
+     left: calc(50% - (670px / 2));
+ }
+
+.mod-image {
+     width: 330px;
+ }
+
+.mod-button {
+     background-color: #4997D0;
+     color: aliceblue;
+ }
+
+.mod-form {
+     width: 100%;
+
+ }
+
+.mod-form input, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 30px;
+
+}
+input::placeholder  {
+    color: #ccc;
+}
+
+.comments {
+    padding: 0 20px;
+    width: 100%;
+}
+
+ .close-mod {
+     cursor: pointer;
+     background-color: white;
+ }
+ 
+ @media only screen and (max-width: 360px) {
+     .container {
+         width: 100%;
+         padding: 0;
+     }
+     .main {
+         margin: auto;
+     }
+     .image {
+         display: block;
+     }
+     .image-width {
+         width: 100%;
+    }
+     .mod {
+         max-width: 360px;
+         flex-wrap: wrap;
+         top: 0;
+         left: 0;
+         padding: 0;
+     }
+     .mod-image {
+         width: 360px;
+     }
+     .fon {
+         width: 360px;
+         left: 0;
+     }
+     .close-mod {
+         position: absolute;
+         top: 0;
+         right: 0;
+     }
+ }

@@ -20,7 +20,6 @@ function Mod(props) {
     useEffect(() =>{
         if (params !== undefined) {
             dispatch(loadBigImage(params))
-            // dispatch(addComments(params, comment))
         }
     }, [dispatch, params])
 
@@ -44,7 +43,6 @@ function Mod(props) {
     return (
         params === undefined ? null : (
             <div className='fon'>
-
             <div className='mod'>
                 <div className='mod-form'>
                         <img src={bigImage.url} alt="" className='mod-image'/>
@@ -66,14 +64,18 @@ function Mod(props) {
                     {bigImage.comments.map(com => {
                         return (
                             <div>
-                                <div>{}</div>
+                                <div>{new Date(com.date).toLocaleDateString('en-GB')}</div>
                                 {com.text}
                             </div>
                         )
                     })}
                     {comment.map(comm => {
                         return (
-                            <div> {comm}</div>)
+
+                            <div>
+                                <div>{new Date().toLocaleDateString('en-GB')}</div>
+                                {comm}
+                            </div>)
                     })}
                 </div>
                 <div onClick={handleClose} className='close-mod'>

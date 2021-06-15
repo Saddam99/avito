@@ -19,7 +19,7 @@ const bigImage = (state=initialState, action) => {
         case 'comments/success':
             return {
                 ...state,
-
+                item: action.payload
             }
         default:
             return state

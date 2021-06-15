@@ -26,21 +26,21 @@ export const loadBigImage = (id) => {
     }
 }
 
-// export const addComments = (id , comment) => {
-//     return dispatch => {
-//         fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}/comments`, {
-//             method: 'POST',
-//             body:JSON.stringify({
-//                 comments: comment
-//             }),
-//             headers: {'Content-type': 'application/json'}
-//         })
-//             .then(response => response.json())
-//             .then(json => {
-//                 dispatch({
-//                     type: 'comment/success',
-//                     payload: json
-//                 })
-//             })
-//     }
-// }
+export const addComments = (id , comment) => {
+    return dispatch => {
+        fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}`, {
+            method: 'POST',
+            body:JSON.stringify({
+                text: comment
+            }),
+            headers: {'Content-type': 'application/json'}
+        })
+            .then(response => response.json())
+            .then(json => {
+                dispatch({
+                    type: 'comment/success',
+                    payload: json
+                })
+            })
+    }
+}
